@@ -15,7 +15,6 @@ pipeline{
             }
   
         }
-    }
         stage("Test"){
             when {
                 anyOf {
@@ -26,6 +25,7 @@ pipeline{
             steps{
                 echo "========Running tests========"
                 bat "dotnet test"
+            }
         }
     }
 }
