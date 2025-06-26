@@ -5,7 +5,7 @@ pipeline{
         stage("Build"){
             when {
                 anyOf {
-                    branch 'master'
+                    branch 'main'
                     branch pattern: "feature/.*", comparator: "REGEXP"   
                 }
             }
@@ -20,7 +20,7 @@ pipeline{
     stage("Test"){
             when {
                 anyOf {
-                    branch 'master'
+                    branch 'main'
                     branch pattern: "feature/.*", comparator: "REGEXP"   
                 }
             }
