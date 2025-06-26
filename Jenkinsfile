@@ -16,17 +16,16 @@ pipeline{
   
         }
     }
-
-    stage("Test"){
+        stage("Test"){
             when {
                 anyOf {
                     branch 'main'
                     branch pattern: "feature/.*", comparator: "REGEXP"   
                 }
             }
-        steps{
-            echo "========Running tests========"
-            bat "dotnet test"
+            steps{
+                echo "========Running tests========"
+                bat "dotnet test"
         }
     }
 }
