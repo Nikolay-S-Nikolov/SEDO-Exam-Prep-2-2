@@ -3,8 +3,8 @@ name: Build and test
 on:
   push:
     branches: 
-      - develop 
-      - staging  
+      - developnew 
+      - stagingnew  
 
 jobs:
   build:
