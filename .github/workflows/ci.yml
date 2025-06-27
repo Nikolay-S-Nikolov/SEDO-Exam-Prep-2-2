@@ -6,7 +6,7 @@ name: Build and test
 on:
   push:
     branches: 
-      - develop 
+      - develop/** 
       - feature/**
 
 jobs:
