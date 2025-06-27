@@ -26,9 +26,9 @@ jobs:
         run: dotnet build --no-restore
 
       - name: Run unit tests
-        if: github.ref == 'refs/heads/staging'
+        if: github.ref == 'refs/heads/stagingnew'
         run: dotnet test HouseRentingSystem.Tests --no-build --verbosity normal
 
       - name: Run integration tests
-        if: github.ref == 'refs/heads/develop'
+        if: github.ref == 'refs/heads/developnew'
         run: dotnet test HouseRentingSystem.UnitTests --no-build --verbosity normal
